@@ -1,0 +1,50 @@
+T20 IPL conducts a contest during the match to get the name of players which either starts with M or ends with a. Write a
+
+
+program to display the name of the players in the format as given in sample input and output.
+ 
+
+  Sample Input and Output : 
+Enter the number of players 
+5 
+Enter the player name 
+Mahendra Singh Dhoni 
+Michael Hussey
+Rohit Sharma
+Rahul Sharma
+Ravichandran Ashwin 
+Player name starting with 'M' or Ending with 'a' 
+Mahendra Singh Dhoni 
+Michael Hussey 
+Rohit Sharma 
+Rahul Sharma
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the number of players");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the player name");
+            string[] t = new string[b];
+            for (int i = 0; i < b; i++)
+            {
+                t[i] = Console.ReadLine();
+            }
+            Console.WriteLine("Player name starting with 'M' or Ending with 'a'");
+            for (int i = 0; i < b; i++)
+            {
+                if (t[i].StartsWith("M")||(t[i].EndsWith("a")))
+                {
+                    Console.WriteLine(t[i]);
+                }
+            }
+            Console.ReadKey();
