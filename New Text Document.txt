@@ -1,0 +1,47 @@
+ 
+
+T20 IPL tries to generate substring of team names for their convenience. Write a program to get a team name, starting
+
+
+
+index and length of the substring required to be displayed and generate a substring.
+ 
+
+Sample Input/Output 1:
+
+ 
+
+Enter team name 
+Delhi DareDevils 
+Enter starting index of the sequence 
+6 
+Enter ending index of the sequence 
+10 
+DareDevils
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter team name");
+            string a = Console.ReadLine();
+            Console.WriteLine("Enter starting index of the sequence");
+            int b = Convert.ToInt32(Console.ReadLine());
+            //string c = a.Substring(b);
+            //Console.WriteLine("Short name of "+a+": "+c);
+            Console.WriteLine("Enter length of the sequence");
+            int d = Convert.ToInt32(Console.ReadLine());
+            string c = a.Substring(b, d);
+            Console.WriteLine(c);
+            Console.ReadKey();
+        }
+    }
